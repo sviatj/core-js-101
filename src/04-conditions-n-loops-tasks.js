@@ -179,7 +179,6 @@ function findFirstSingleChar(/* str */) {
   throw new Error('Not implemented');
 }
 
-
 /**
  * Returns the string representation of math interval,
  * specified by two points and include / exclude flags.
@@ -219,8 +218,11 @@ function getIntervalString(/* a, b, isStartIncluded, isEndIncluded */) {
  * 'rotator' => 'rotator'
  * 'noon' => 'noon'
  */
-function reverseString(/* str */) {
-  throw new Error('Not implemented');
+function reverseString(str) {
+  let newStr = '';
+  for (let i = str.length - 1; i >= 0; i -= 1) {
+    newStr += str[i];
+  } return newStr;
 }
 
 
@@ -236,8 +238,12 @@ function reverseString(/* str */) {
  *   87354 => 45378
  *   34143 => 34143
  */
-function reverseInteger(/* num */) {
-  throw new Error('Not implemented');
+function reverseInteger(num) {
+  const res = num.toString();
+  let newStr = '';
+  for (let i = res.length - 1; i >= 0; i -= 1) {
+    newStr += res[i];
+  } return newStr;
 }
 
 
